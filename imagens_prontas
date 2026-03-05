@@ -1,0 +1,123 @@
+
+	Classroom License -- for classroom instructional use only.
+
+>> X = imread('ronaldinho2.jpg');
+>> X(1,1,1)
+
+ans =
+
+  uint8
+
+   98
+
+>> X(1,1,3)
+
+ans =
+
+  uint8
+
+   86
+
+>> X(1,1,1:3)
+
+  1×1×3 uint8 array
+
+ans(:,:,1) =
+
+   98
+
+
+ans(:,:,2) =
+
+   88
+
+
+ans(:,:,3) =
+
+   86
+
+>> imshow(X)
+>> imshow(X(1:200, 1:200))
+>> imshow(X(:,:,1))
+>> imshow(X(:,:,1))
+>> imshow(X(:,:,1:3))
+>> imshow(X(:,:,1:2))
+Error using images.internal.imageDisplayValidateParams>validateCData
+Multi-plane image inputs must be RGB images of size MxNx3.
+
+Error in images.internal.imageDisplayValidateParams (line 30)
+common_args.CData = validateCData(common_args.CData,image_type);
+
+Error in images.internal.imageDisplayParseInputs (line 79)
+common_args = images.internal.imageDisplayValidateParams(common_args);
+
+Error in imshow (line 253)
+    images.internal.imageDisplayParseInputs({'Parent','Border','Reduce'},preparsed_varargin{:});
+ 
+>> imshow(X(:,:,1:3))
+>> imshow(X(:,:,2:3))
+Error using images.internal.imageDisplayValidateParams>validateCData
+Multi-plane image inputs must be RGB images of size MxNx3.
+
+Error in images.internal.imageDisplayValidateParams (line 30)
+common_args.CData = validateCData(common_args.CData,image_type);
+
+Error in images.internal.imageDisplayParseInputs (line 79)
+common_args = images.internal.imageDisplayValidateParams(common_args);
+
+Error in imshow (line 253)
+    images.internal.imageDisplayParseInputs({'Parent','Border','Reduce'},preparsed_varargin{:});
+ 
+>> imshow(X(:,:,3))
+>> imshow(X(:,:,2))
+>> imshow(X(:,:,1),(:,:,2),(:,:,3))
+ imshow(X(:,:,1),(:,:,2),(:,:,3))
+                  ↑
+Invalid use of operator.
+ 
+>> imshow(X(:,:,1) (:,:,2) (:,:,3))
+Error:  Invalid array indexing.
+ 
+>> imshow([X(:,:,1) (:,:,2) (:,:,3)])
+ imshow([X(:,:,1) (:,:,2) (:,:,3)])
+                   ↑
+Invalid use of operator.
+ 
+>> imshow([X(:,:,1) X(:,:,2) X(:,:,3)])
+>> Y = X;
+>> X = imread('hq720.jpg');
+>> Y = X;
+>> Y(:,:,2) = 0;
+>> Y(:,:,3) = 0;
+>> imshow(Y)
+>> Yg = X;
+>> Yg(:,:,1) = 0;
+>> Yg(:,:,3) = 0;
+>> Yb = X;
+>> Yb(:,:,1) = 0;
+>> Yb(:,:,2) = 0;
+>> imshow([Y Yg Yb])
+>> Z = X;
+>> Z(:,:,3) = 0;
+>> figure(2)
+>> imshow(Z)
+>> Z2 = X; Z2(:,:,2) = 0;
+>> imshow(Z2)
+>> imshow([X Z Z2])
+>> Z3 = X;
+>> Z3(:,:,1) = 0;
+>> imshow([X,Z,Z2,Z3])
+>> X_cinza = rgb2gray(X);
+>> close all
+>> imshow(X_cinza)
+>> X_cinza_reais = double(X_cinza)/255;
+>> imshow(X_cinza_reais)
+>> imshow(X_cinza_reais/5)
+>> imshow(X_cinza_reais/5)
+>> imshow(X_cinza_reais*5)
+>> imshow(X_cinza_reais/5)
+>> imshow(X_cinza_reais)
+>> imshow(X_cinza_reais.^0.8)
+>> imshow([X_cinza_reais X_cinza_reais.^0.8])
+>> imshow([X_cinza_reais X_cinza_reais.^3])
+>> 
