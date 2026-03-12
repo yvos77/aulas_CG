@@ -1,0 +1,29 @@
+Primeiramente, foi carregada uma imagem colorida no MATLAB. Em seguida, essa imagem foi convertida do espaço de cores RGB para HSI.
+
+Na primeira parte da atividade foi feita a alteração da saturação da imagem. Foram geradas duas versões:
+
+uma com saturação máxima, deixando as cores mais fortes;
+
+outra com saturação mínima, que remove as cores e deixa a imagem praticamente em tons de cinza.
+
+Depois disso, as imagens foram convertidas novamente para RGB para que pudessem ser exibidas.
+
+Na segunda parte da atividade foi feita a inversão da tonalidade da imagem. Isso foi feito somando 0,5 ao valor da tonalidade (Hue) e aplicando módulo 1, o que desloca a cor para a posição oposta no círculo de cores.
+
+Por fim, a imagem modificada também foi convertida novamente para RGB para visualização.
+
+Após executar o algoritmo, foi possível observar claramente os efeitos das alterações feitas na imagem.
+
+Na versão com saturação máxima, as cores ficaram mais intensas e destacadas.
+
+Na versão com saturação mínima, a imagem perdeu as cores e passou a apresentar apenas tons de cinza.
+
+Já na inversão da tonalidade, as cores da imagem foram substituídas por suas cores complementares, mudando bastante a aparência da imagem.
+
+Esses resultados mostram que o espaço de cores HSI facilita a manipulação de propriedades específicas da imagem, como a intensidade das cores e a tonalidade.
+
+A atividade permitiu entender melhor como funciona a manipulação de imagens em diferentes espaços de cores. Utilizando o modelo HSI, foi possível alterar separadamente a saturação e a tonalidade da imagem.
+
+Os resultados mostraram que pequenas alterações nesses parâmetros podem gerar mudanças significativas na aparência da imagem.
+
+Assim, o experimento ajudou a demonstrar na prática como técnicas de processamento de imagens podem ser utilizadas para modificar características visuais de forma controlada.
